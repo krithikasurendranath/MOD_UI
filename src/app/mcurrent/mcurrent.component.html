@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    form {
+      border: 3px solid black;
+      border-radius: 25px;
+      margin-top: 170px;
+      margin-left: -930px;
+      width: -300px;
+    }
+
+    body {
+      margin-left: 943px;
+      margin-top: -430px;
+    }
+
+    ul {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: -35px;
+    }
+  </style>
+</head>
+
+<body>
+  <form #mentorsignup="ngForm" style=" width: max-content; height: max-content; background-color:white;color: black">
+    <div class="whole">
+      <button type="submit" (click)="add()">Edit Profile</button>
+      <div *ngIf="addclick==1">
+        <div class="container">
+          <label for="email"><b>EMAIL</b></label>
+          <span><input type="email" #email="ngModel" placeholder="Enter Mail" name="email_id" required email
+              [(ngModel)]="item.mmail" #email="ngModel"></span><br><br>
+          <div *ngIf="email.errors && (email.dirty || email.touched)">
+            <p *ngIf="email.errors.required"> * Email is required </p>
+            <p *ngIf="email.errors.email"> * Email is not valid </p>
+          </div>
+          <div>
+            <label for="mname"><b>USERNAME</b></label>
+            <span><input type="text" placeholder="Enter mentorname" name="mentor_name" required mname
+                [(ngModel)]="item.mname" #uname="ngModel"></span><br><br>
+          </div>
+          <div>
+            <label for="unumber"><b>USER NUMBER</b></label>
+            <span><input type="number" placeholder="Enter mentor number" name="mentor_num" required mnumber
+                [(ngModel)]="item.mnumber" ></span><br><br>
+          </div>
+          <div>
+            <label for="psw"><b>PASSWORD</b></label>
+            <span> <input type="password" id="psw" name="pass_word" placeholder="Enter Password"
+                style="margin-left: 62px;text-align: center;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required minlength="7" [(ngModel)]="item.mpassword" #pass="ngModel"></span><br><br>
+          </div>
+          <div>
+              <label for="mtimeslot"><b>TIMESLOT</b></label>
+              <span><input type="text" placeholder="Enter timeslot" name="timeslot" required mtimeslot
+                  [(ngModel)]="item.mtimeslot" ></span><br><br>
+            </div>
+            <div>
+                <label for="mskills"><b>SKILLS</b></label>
+                <span><input type="text" placeholder="Enter mentor skills" name="skills" required mskills
+                    [(ngModel)]="item.mskills" ></span><br><br>
+              </div>
+              <div>
+                  <label for="mexperience"><b>EXPERIENCE</b></label>
+                  <span><input type="number" placeholder="Enter mentor experience" name="experience" required mexperience
+                      [(ngModel)]="item.mexperience" ></span><br><br>
+                </div>
+        </div>
+        <button (click)="Update()">Edit Changes</button>
+      </div>
+      {{lists|json}}
+    </div>
+    {{item|json}}
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <style>
+                    form {border: 3px solid black;
+                border-radius:25px;
+                margin-top: 170px;
+                margin-left: -930px;
+                margin-right: auto;
+                width: -300px;
+                
+                }
+                   
+                body{
+                    margin-left: 943px;
+                    margin-top: -430px;
+                   
+                }
+                ul{
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    margin-left: -35px;
+                  }
+                </style>
+        </head>
+                <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+                        <title>Document</title>
+                    </head>
+                    <body>
+                            <form style="width: max-content; height: max-content; background-color:white;color: black">
+                        <div>
+                            <ul>
+<table class="table table-hover table-bordered" border="1" >
+        <thead>
+            <tr>
+                    <th>Payment Id</th>
+                <th>User Id</th>
+                <th>Mentor Id</th>
+                <th>Amount</th>
+                <th>Mentor Amount</th>
+                
+              
+
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                    <td>{{item.pid}}</td>
+                <td>{{item.uid}}</td>
+                <td>{{item.mid}}</td>
+                <td>{{item.amount}}</td>
+                <td>{{item.mentor_Amount}}</td>
+               
+                <!-- <td> <button type="submit" (click)="Block(item.pid)">Block</button></td> -->
+                <td> <button type="submit" (click)="DeletePayment(item.pid)">Delete</button></td>
+                
+              
+            </tr>
+        </tbody>
+    </table>
+</ul>
+</div>
+    </form>
+</body>
+</html>
+

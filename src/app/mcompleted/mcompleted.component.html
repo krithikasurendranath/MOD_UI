@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <style>
+                    form {border: 3px solid black;
+                border-radius:25px;
+                margin-top: 170px;
+                margin-left: -930px;
+                width: -300px;
+                
+                }
+                   
+                body{
+                    margin-left: 943px;
+                    margin-top: -430px;
+                   
+                }
+                ul{
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    margin-left: -35px;
+                  }
+                </style>
+        </head>
+                <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+                        <title>Document</title>
+                    </head>
+                    <body>
+                            <form style="width: max-content; height: max-content; background-color:white;color: black">
+                        <div>
+                            <ul>
+<table class="table table-hover table-bordered" border="1" >
+        <thead>
+            <tr>
+                <th>Training Id</th>
+                <th>User Id</th> 
+                <th>Mentor Id</th>
+                <th>Skills Id</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>TimeSlot</th>
+                <th>Progress</th>
+                <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of list">
+        <tr>
+                <td>{{item.tid}}</td>
+            <td>{{item.uid}}</td>
+            <td>{{item.mid}}</td>
+            <td>{{item.sid}}</td>
+            <td>{{item.startDate}}</td>
+            <td>{{item.endDate}}</td>
+            <td>{{item.timeslot}}</td>
+            <td>{{item.progress}}</td>
+            <td>{{item.rating}}</td>
+                <!-- <td> <button type="submit" (click)="Block(item.mid)">Block</button></td>
+                <td> <button type="submit" (click)="Delete(item.mid)">Delete</button></td> -->
+                
+              
+            </tr>
+        </tbody>
+    </table>
+</ul>
+</div>
+    </form>
+</body>
+</html>
+
+
+

@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   .button {
+                background-color: rgb(3, 3, 3);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+              }
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid black;
+border-radius:25px;
+margin-top: 570px;
+margin-top: 93px;
+
+}
+ul{
+    font-family: fantasy;
+  }
+/* ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(204, 214, 218);
+} */
+
+
+
+</style>
+</head>
+<body style="font-size: 24;margin-top:-583px;margin-left:800px;">
+
+<form style="width: 70%; background-color:rgb(248, 244, 244);">
+		<h2 style="text-align: center;">MENTOR FORUM </h2>
+  <div class="container">
+    <button class ="button" style="-align: center;" routerLink='currenttrainings'> CURRENT TRAININGS</button><br>
+    <button class ="button" style="text-align: center;" routerLink='completedtrainings'> COMPLETED TRAININGS</button><br>
+    <button class ="button" style="text-align: center;" routerLink='notifications'>NOTIFICATIONS</button><br>
+    <button class ="button" style="text-align: center;" routerLink='editskills'>EDIT SKILLS</button><br>
+    <button class ="button" style="text-align: center;" routerLink='logout'>LOGOUT</button><br>
+
+	  
+   
+	  </div>
+  
+</form>
+
+</body>
+</html>
+<router-outlet></router-outlet>
+ 

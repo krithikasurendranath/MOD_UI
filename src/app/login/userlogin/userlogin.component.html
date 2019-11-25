@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                    body {font-family: Arial, Helvetica, sans-serif;}
+                    form {border: 3px solid black;
+                    border-radius:25px;
+                    margin-top: 600px;
+                     }
+                     textarea:focus, input:focus{
+                        outline: none;
+                    }
+                    label {
+                        float: left
+                    }
+                    span {
+                        display: block;
+                        overflow: hidden;
+                        padding: 0 4px 0 6px
+                    }
+                    
+                    input[type=email], input[type=password] {
+                    
+                        background: transparent;
+                        border: none;
+                         border-bottom: 1px solid grey;
+                    }
+                      input[type=password]:focus {
+                         border-bottom: 2px solid #000;
+                    
+                       }
+                      
+                    button {
+                        border-radius: 25px;
+                      background-color:black;
+                      color: white;
+                      padding: 14px 20px;
+                      margin: 8px 0;
+                      border: none;
+                      cursor: pointer;
+                      width: 100%;
+                    }
+                    .container {
+                      padding: 25px;
+                    }
+                    span.psw {
+                      float: right;
+                      padding-top: 16px;
+                    }
+                    button:hover {
+                      opacity: 0.8;
+                    }
+                     
+                    .container {
+                      padding: 30px;
+                    
+                    }
+                    @media screen and (max-width: 300px) {
+                      span.psw {
+                         display: block;
+                         float: none;
+                      }
+                    }
+                    ul{
+    font-family: fantasy;
+  }
+                    
+                    /* Change styles for span and cancel button on extra small screens */
+                    
+                    </style>
+    </head>
+
+            <body style="font-size: 24;margin-top:-580px;margin-left:800px;">
+
+
+
+                    <form #userlogin="ngForm"  style="width: 70%; background-color:white;" >
+                      
+                        <h2 style="text-align: center;">USER/MENTOR/ADMIN LOGIN</h2>
+                        <div class="container">
+                          <div>
+                        <label for="email" ><b>EMAIL</b></label>
+                        <span><input type="email"  placeholder="Enter Mail" name="email_id" required email [(ngModel)]="email" ></span><br>
+                        </div>
+                
+                        <div>
+                        <label for="psw"><b>PASSWORD</b></label>  
+                       <span> <input type="password" id="psw" name="pass_word" placeholder="Enter Password" style="margin-left: 62px;text-align: center;" required minlength="7"  [(ngModel)]="pwd" ></span><br>
+                      </div> 
+                
+          
+            <button type="submit" (click)="Login()">USER/MENTOR/ADMIN LOGIN</button><br>
+            
+            {{message}}
+            </div>
+          
+                    </form>
+    </body>
+</html>

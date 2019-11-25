@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <style>
+                    form {border: 3px solid black;
+                border-radius:25px;
+                margin-top: 170px;
+                margin-left: -920px;
+                width: -300px;
+                
+                }
+                   
+                body{
+                    margin-left: 943px;
+                    margin-top: -430px;
+                   
+                }
+                ul{
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    margin-left: -35px;
+                  }
+                </style>
+        </head>
+                <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+                        <title>Document</title>
+                    </head>
+                    <body>
+                          
+                            <form style="width: max-content; height: max-content; background-color:white;color: black">
+                        <div>
+                            <ul> 
+ <table class="table table-hover table-bordered" border="1" >
+        <thead>
+            <tr>
+                <th>Skill Id</th>
+                <th>Skill Name</th>
+                <th>TOC</th>
+                <th>Fee</th>
+                <th>Duration</th>
+              
+                 </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                <td>{{item.sid}}</td>
+                <td>{{item.sname}}</td>
+                <td>{{item.stoc}}</td>
+                <td>{{item.sfee}}</td>
+                <td>{{item.sduration}}</td>
+                <td> <button type="submit" (click)="Delete(item.sid)">Delete</button></td>
+                </tr>
+        </tbody>
+        
+    </table>
+    <button type="submit" (click)="add()">ADD</button>
+    <div *ngIf="addClick==1">
+    <input type="text" placeholder="Skill name" name="name1" [(ngModel)]="item.sname"><br>
+    <input type="text"  placeholder="TOC"name="name2" [(ngModel)]="item.stoc"><br>
+    <input type="number"  placeholder="Fee"name="name3" [(ngModel)]="item.sfee"><br>
+    <input type="number"  placeholder="Duration"name="name4" [(ngModel)]="item.sduration"><br>
+    </div>
+    <button type="submit" (click)="AddSkills()">SUBMIT</button>
+</ul>
+</div>
+    </form>
+</body>
+</html>
+

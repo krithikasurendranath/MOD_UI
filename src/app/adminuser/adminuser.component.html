@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <style>
+                    form {border: 3px solid black;
+                border-radius:25px;
+                margin-top: 170px;
+                margin-left: -920px;
+                width: -300px;
+                
+                }
+                   
+                body{
+                    margin-left: 943px;
+                    margin-top: -430px;
+                   
+                }
+                ul{
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    margin-left: -35px;
+                  }
+                </style>
+        </head>
+                <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+                        <title>Document</title>
+                    </head>
+                    <body>
+                            <form style="width: max-content; height: max-content; background-color:white;color: black">
+                        <div>
+                            <ul>
+<table class="table table-hover table-bordered" border="1" >
+        <thead>
+            <tr>
+                    <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+               
+                <th>Status</th>
+              
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                    <td>{{item.uid}}</td>
+                <td>{{item.uname}}</td>
+                <td>{{item.umail}}</td>
+                <td>{{item.unumber}}</td>
+                <td>{{item.uactive}}</td>
+                <td> <button type="submit" (click)="Block(item.uid)">Block</button></td>
+                <td> <button type="submit" (click)="Unblock(item.uid)">Unblock</button></td>
+                <td> <button type="submit" (click)="Delete(item.uid)">Delete</button></td>
+                
+              
+            </tr>
+        </tbody>
+    </table>
+</ul>
+</div>
+    </form>
+</body>
+</html>

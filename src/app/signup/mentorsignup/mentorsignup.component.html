@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+  form {border: 3px solid black;
+  border-radius:25px;
+  margin-top: 600px;
+   }
+   textarea:focus, input:focus{
+      outline: none;
+  }
+  label {
+    float: left
+}
+span {
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px
+}
+input {
+    width: 100%
+}
+  
+  input[type=email], input[type=password] {
+  
+      background: transparent;
+      border: none;
+       border-bottom: 1px solid grey;
+  }
+    
+     input[type=number]:focus {
+       border-bottom: 2px solid #000;
+     }
+     input[type=text]:focus {
+       border-bottom: 2px solid #000;
+     }
+     input[type=text]:focus {
+       border-bottom: 2px solid #000;
+     }
+     input[type=text]:focus {
+       border-bottom: 2px solid #000;
+     }
+     input[type=text]:focus {
+       border-bottom: 2px solid #000;
+     }
+  button {
+    border-radius: 25px;
+    background-color:black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .container {
+    padding: 25px;
+  }
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    color:white;
+    border-radius: 25px;
+    width: auto;
+    padding: 10px 18px;
+    background-color:black;
+  }
+  ul{
+    font-family: fantasy;
+  }
+  
+  
+  
+  
+  .container {
+    padding: 30px;
+  
+  }
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+  
+  /* Change styles for span and cancel button on extra small screens */
+  
+  </style>
+</head>
+<body style="font-size: 24;
+margin-top: -585px;
+margin-left: 730px;
+margin-right: 74px;
+margin-bottom: -18px;
+">
+
+
+
+<form style="width: 90%; background-color:white;">
+  <h2 style="text-align: center;">MENTOR SIGN-UP</h2>
+	 <div class="container">
+            <div>
+    <label for="uname"  ><b>MENTOR NAME</b></label>
+   <span> <input type="text" #email2="ngModel" placeholder="Enter Mentorname" name="uname" required email [(ngModel)]="item.mname"></span><br>
+     <div  *ngIf="email2.errors && (email2.dirty || email2.touched)">
+        <p  *ngIf="email2.errors.required"> * Email is required </p> 
+        <p  *ngIf="email2.errors.email"> * Email is not valid </p> 
+      </div>
+    </div>
+    <div>
+    <label for="psw" ><b>PASSWORD</b></label>
+    <!-- <label for="psw"><b>CONFIRM PASSWORD</b></label><br><br>
+    -->
+    <span><input type="password" id="psw" name="psw"placeholder="Enter Password" minlength="8" #pass="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required [(ngModel)]="item.mpassword"></span><br>
+    
+     
+      </div>
+    <!-- <input type="password"  placeholder="Enter Confirm Password" name="psw" required [(ngModel)]="item.mpassword"><br><Br>
+      <div *ngIf="pass?.touched && pass.errors.minlength">
+         
+          Password must be 7 characters or more 
+       </div> 
+     <div *ngIf="pass?.touched && pass.errors.required">
+       password required
+     </div> -->
+  
+    
+    <label for ="uname" ><b>TIMESLOT</b></label>
+    <span><input type="text"  placeholder="Enter Timeslot" name="Timings" required [(ngModel)]="item.mtimeslot"></span><br>
+
+    <label for="uname" ><b>EXPERIENCE</b></label>
+    <span><input type="number"  placeholder="Enter Experience" name="experience" required [(ngModel)]="item.mexperience"></span><br>
+
+    <label for="uname" ><b>SKILLS</b></label>
+    <span><input type="text" placeholder="Enter Skills" name="Skills" required [(ngModel)]="item.mskills"></span><br>
+
+    <label for="uname" ><b>EMAIL</b></label>
+    <span><input type="text" placeholder="Enter email" name="verify" required [(ngModel)]="item.mmail" ></span><br>
+
+    <label for="number" ><b>MOBILE NUMBER</b></label>
+    <span><input type="number"  placeholder="Enter number" name="linkedin" required [(ngModel)]="item.mnumber"></span><br>
+    <!-- <label for="uname" "><b>LIST OF TECHNOLOGIES</b></label>
+    <label for="uname" "><b>FACILITIES PROVIDED</b></label><br><br>
+    <input type="text"xt-align: center;" placeholder="Enter the Technologies" name="lot" required [(ngModel)]="lot">
+    <input type="text placeholder="Enter Facilities Provided" name="providers" required [(ngModel)]="fapro"><br><br> -->
+    
+    <button type="submit"  (click)="Add()">Sign Up</button>
+    <button type="button" style="text-align: center;    margin-left: 38%;" class="cancelbtn">Cancel</button>
+	
+  </div>
+  
+</form>
+
+</body>
+</html>

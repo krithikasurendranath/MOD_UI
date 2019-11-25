@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   .button {
+                background-color: rgb(146, 158, 146);
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+              }
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid black;
+border-radius:25px;
+margin-top: 570px;
+margin-top: 93px;
+}
+/* ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(204, 214, 218);
+}
+
+li {
+  float: left;
+} */
+
+
+</style>
+</head>
+<body style="font-size: 24;margin-top:-583px;margin-left:800px;">
+
+<form style="width: 70%; background-color:white;color: black">
+		<h2 style="text-align: center;">USER FORUM</h2>
+  <div class="container">
+    <br>
+    <button class ="button" routerLink='currenttrainings'> CURRENT TRAININGS</button>
+    <button class ="button" routerLink='completedtrainings'> COMPLETED TRAININGS</button>
+    <button class ="button" routerLink='notifications'>NOTIFICATIONS</button>
+    <button class ="button" routerLink='logout'>LOGOUT</button>
+	  
+    
+
+	  </div>
+  
+</form>
+
+</body>
+</html>
+<router-outlet></router-outlet>
+ 

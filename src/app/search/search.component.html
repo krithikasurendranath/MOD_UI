@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <style>
+                    form {border: 3px solid black;
+                border-radius:25px;
+                margin-top: -570px;
+                margin-left: -360px;
+                width: -300px;
+                
+                }
+                   
+                body{
+                    margin-left: 943px;
+                    margin-top: -430px;
+                   
+                }
+                ul{
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    margin-left: -35px;
+                  }
+                </style>
+                </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+</head>
+<body>
+        <form style="width: max-content; height: max-content; background-color:white;color: black">
+    <div>
+        <ul>
+        <table>
+            <tr>
+                <td>Technology</td>
+                <td><input type="text" name="" id="" name="skills" [(ngModel)]='skills'></td>
+            </tr>
+            <tr>
+                <td>
+                    <button (click)="Search()">Search</button>
+                </td>
+            </tr>
+        </table>
+        <table class="table table-hover table-bordered" border="1" >
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                       
+                        <th>Experience</th>
+                        <th>Timeslot</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let item of list">
+                    <tr>
+                        <td>{{item.mname}}</td>
+                        <td>{{item.mmail}}</td>
+                        <td>{{item.mnumber}}</td>
+                        <td>{{item.mexperience}}</td>
+                        <td>{{item.mtimeslot}}</td>
+                      
+                    </tr>
+                </tbody>
+            </table>
+    </ul>
+    </div>
+        </form>
+</body>
+</html>
+{{skills}}

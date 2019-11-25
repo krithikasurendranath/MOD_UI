@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    form {border: 3px solid black;
+border-radius:25px;
+margin-top: -570px;
+}
+
+body{
+    
+    margin-left: 943px;
+    margin-top: -530px;
+   
+}
+   
+.dropbtn {
+  background-color: rgb(47, 58, 59);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f5ececd0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(56, 69, 71)}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(81, 97, 100)
+}
+body{
+    margin-left: 943px;
+    margin-top: -430px;
+   
+}
+</style>
+</head>
+<body>
+
+
+      
+       <form style="width: 70%; background-color:white;color: black">
+            <div class="container">
+<div class="dropdown"style="height: 333px;">
+        <h1>Welcome {{item.uname}}!</h1>
+    
+  <button class="dropbtn">DETAILS
+    
+  </button>
+  <div class="dropdown-content">
+  
+  <button routerLink="ucurrent">EDIT</button><br>
+  <button routerLink="ucompleted">COMPLETED TRAINING</button><br>
+  <button routerLink="unotifications">NOTIFICATIONS</button><br>
+  <button type="submit" (click)="logout()">LOGOUT</button><br>
+  </div>
+</div>
+            </div>
+       </form>
+
+
+
+</body>
+</html>
+
+<router-outlet></router-outlet>

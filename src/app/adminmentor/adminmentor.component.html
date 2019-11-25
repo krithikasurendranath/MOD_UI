@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <style>
+                    form {border: 3px solid black;
+                border-radius:25px;
+                margin-top: 170px;
+                margin-left: -930px;
+                width: -300px;
+                
+                }
+                   
+                body{
+                    margin-left: 943px;
+                    margin-top: -430px;
+                   
+                }
+                ul{
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    margin-left: -35px;
+                  }
+                </style>
+        </head>
+                <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+                        <title>Document</title>
+                    </head>
+                    <body>
+                            <form style="width: max-content; height: max-content; background-color:white;color: black">
+                        <div>
+                            <ul>
+<table class="table table-hover table-bordered" border="1" >
+        <thead>
+            <tr>
+                    <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Skills</th>
+                <th>Experience</th>
+                <th>Timeslot</th>
+                <th>Availability</th>
+                <th>Active</th>
+                
+              
+
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                    <td>{{item.mid}}</td>
+                <td>{{item.mname}}</td>
+                <td>{{item.mmail}}</td>
+                <td>{{item.mnumber}}</td>
+                <td>{{item.mskills}}</td>
+                <td>{{item.mexperience}}</td>
+                <td>{{item.mtimeslot}}</td>
+                <td>{{item.mavailability}}</td>
+                <td>{{item.mactive}}</td>
+                
+
+                <td> <button type="submit" (click)="Block(item.mid)">Block</button></td>
+                <td> <button type="submit" (click)="Unblock(item.mid)">Unblock</button></td>
+                <td> <button type="submit" (click)="Delete(item.mid)">Delete</button></td>
+                
+              
+            </tr>
+        </tbody>
+    </table>
+</ul>
+</div>
+    </form>
+</body>
+</html>
